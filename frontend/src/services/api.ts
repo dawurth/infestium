@@ -13,3 +13,18 @@ export const addAgent = async (agent: { id: number; name: string }): Promise<any
     });
     return response.json();
 };
+
+export const fetchPlayerProgress = async (): Promise<any> => {
+    const response = await fetch(`${API_BASE_URL}/player-progress`);
+    return response.json();
+};
+
+export const fetchResistanceForces = async (): Promise<any> => {
+    const response = await fetch(`${API_BASE_URL}/resistance-forces`);
+    return response.json();
+};
+
+export const fetchExpansionOpportunities = async (): Promise<any> => {
+    const response = await fetch(`${API_BASE_URL}/expansion-opportunities`);
+    return response.json();
+};
